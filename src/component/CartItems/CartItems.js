@@ -1,7 +1,11 @@
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const CartItems = ({item,removeItemFromCart}) => {
- 
+  const router=useRouter()
+ const handlePayment=()=>{
+  router.push('/payment')
+ }
   return (
     <div className='CartItem-container-main d-flex justify-content-center items-cemter m-auto'>
 <div className='CartItem-container d-flex justify-content-center'>
@@ -15,7 +19,7 @@ const CartItems = ({item,removeItemFromCart}) => {
     <span className='Product-Showcase-Price'>
     <p className='Product-Showcase-Price-Mrp'>&#8377; {item.data.price.mrp}</p>
     <p className='Product-Showcase-Price-Cost'>&#8377; {item.data.price.cost}</p> </span>
-    <button className='btn btn-primary Payment-btn-main'>Proced To Pay</button>
+    <button className='btn btn-primary Payment-btn-main'  onClick={() =>handlePayment()}>Proced To Pay</button>
     <button className='btn btn-outline-dark mt-4' onClick={() => removeItemFromCart(item.data._id)}>Remove</button>
 </div>
 </div>

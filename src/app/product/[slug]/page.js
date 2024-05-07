@@ -34,7 +34,9 @@ const page = () => {
 
   // }, [slug])
  
-
+  const [token, setToken] = useState(null);
+  
+ 
   return (
     <div className="container  Product-showcase">
       <Search />
