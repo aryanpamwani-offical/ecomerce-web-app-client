@@ -17,7 +17,7 @@ export const addToCart = (id, quantity) => async (dispatch) => {
 export const removeFromCart = (id) => (dispatch) => {
     dispatch({
         type: actionTypes.REMOVE_FROM_CART,
-        payload: actionTypes.id
+        payload: id
     })
 
 };
