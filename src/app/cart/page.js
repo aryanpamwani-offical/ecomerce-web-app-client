@@ -16,9 +16,7 @@ import { useDispatch, useSelector } from 'react-redux'
         dispatch(addToCart(id));
 }, [dispatch, cartItems, id]);
 
-const removeItemFromCart = (id) => {
-    dispatch(removeFromCart(id));
-}
+
   return (
  <div >
  {
@@ -30,7 +28,7 @@ const removeItemFromCart = (id) => {
   {cartItems.map((items,key)=>[
     <CartItems key={key}
     item={items}
-   removeItemFromCart={removeItemFromCart}
+  
     />
     
    

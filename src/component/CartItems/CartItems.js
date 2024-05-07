@@ -20,7 +20,7 @@ const CartItems = ({item,removeItemFromCart}) => {
     <p className='Product-Showcase-Price-Mrp'>&#8377; {item.data.price.mrp}</p>
     <p className='Product-Showcase-Price-Cost'>&#8377; {item.data.price.cost}</p> </span>
     <button className='btn btn-primary Payment-btn-main'  onClick={() =>handlePayment()}>Proced To Pay</button>
-    <button className='btn btn-outline-dark mt-4' onClick={() => removeItemFromCart(item.data._id)}>Remove</button>
+    {/* <button className='btn btn-outline-dark mt-4' onClick={() => removeItemFromCart(item.data._id)}>Remove</button> */}
 </div>
 </div>
 <div></div></div>
